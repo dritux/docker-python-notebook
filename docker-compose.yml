@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app/data
+    ports:
+      - "8888:8888"
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
